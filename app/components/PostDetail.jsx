@@ -140,7 +140,7 @@ const PostDetail = ({ post }) => {
         return (
           <pre
             key={index}
-            className="bg-gray-900 text-neutral-300 p-4 relative rounded-lg mb-4"
+            className="bg-gray-900 text-neutral-300 p-2 relative rounded-lg mb-4 text-sm"
           >
             <SyntaxHighlighter language="javascript" style={materialDark}>{text}</SyntaxHighlighter>
             <button
@@ -165,7 +165,7 @@ const PostDetail = ({ post }) => {
   };
 
   return (
-    <div className="shadow-xl p-4 md:p-8 mb-8 bg-black bg-opacity-10 backdrop-blur-lg rounded-xl drop-shadow-xl text-white">
+    <div className="shadow-xl p-4 md:p-8 mb-8 bg-black bg-opacity-10 backdrop-blur-lg rounded-xl drop-shadow-xl text-white text-sm md:text-base">
       <div className="relative overflow-hidden shadow-md mb-6">
         <img
           src={post?.imagenDestacada.url}
@@ -174,8 +174,8 @@ const PostDetail = ({ post }) => {
         />
       </div>
       <div className="px-4 lg:px-0">
-        <div className="flex flex-column md:flex-row justify-center md:justify-between lg:justify-end mb-8 w-full">
-          <div className="flex justify-end mb-4 md:mb-0 lg:w-auto mr-8">
+        <div className="flex flex-wrap md:flex-nowrap justify-center lg:justify-end mb-8 w-full">
+          <div className="flex flex-wrap mb-4 md:mb-0 lg:w-auto">
             <img
               alt={post?.autor.nombre}
               height="30px"
@@ -183,17 +183,17 @@ const PostDetail = ({ post }) => {
               className="align-middle rounded-full object-cover"
               src={post?.autor.avatar.url}
             />
-            <p className="inline align-middle text-neutral-300 ml-2 text-sm md:text-lg">
+            <p className="inline align-middle text-neutral-300 ml-2 text-sm md:text-lg font-normal">
               {post?.autor.nombre}
             </p>
           </div>
-          <div className="flex justify-end align-middle text-neutral-300 ml-2 text-sm md:text-lg">
+          <div className="flex flex-wrap text-neutral-300 ml-2 text-sm md:text-lg">
             <p>
               <span>
                 <BsCalendar2Event
                   className="inline align-middle text-rose-500"
                   size={22}
-                />
+                />{" "}
               </span>
               {moment(post?.createdAt).format("DD MMMM YYYY")}
             </p>
