@@ -174,7 +174,7 @@ const PostDetail = ({ post }) => {
         />
       </div>
       <div className="px-4 lg:px-0">
-        <div className="flex justify-between lg:justify-end mb-8 w-full">
+        <div className="flex flex-column md:flex-row justify-center md:justify-between lg:justify-end mb-8 w-full">
           <div className="flex justify-end mb-4 md:mb-0 lg:w-auto mr-8">
             <img
               alt={post?.autor.nombre}
