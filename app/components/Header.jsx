@@ -18,9 +18,14 @@ const Header = () => {
         <div className='border-b w-full inline-block border-neutral-300 p-4 md:p-8 bg-black bg-opacity-10 backdrop-blur-lg rounded-b-xl drop-shadow-xl'>
             <div className='text-center md:float-left block'>
                 <Link href='/'>
-                    <span className='cursor-pointer font-bold text-4xl text-rose-500'>
-                        JC Blog
-                    </span>
+                    <p className='cursor-pointer font-bold text-4xl text-rose-500'>
+                       Blog
+                       <span>{'('}</span>
+                       <span className='text-amber-500'>{'{'}</span>
+                       JC
+                       <span className='text-amber-500'>{'}'}</span>
+                       <span>{')'}</span>
+                    </p>
                 </Link>
             </div>
             <div className='hidden md:float-left md:contents'>
