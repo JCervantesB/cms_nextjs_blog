@@ -28,7 +28,7 @@ const Comments = () => {
   return (
     <>
       {comments.length > 0 && (
-        <div className='shadow-xl p-8 mb-8 bg-black bg-opacity-10 backdrop-blur-lg rounded-xl drop-shadow-xl text-white'>
+        <div className='shadow-xl p-4 md:p-8 mb-8 bg-black bg-opacity-10 backdrop-blur-lg rounded-xl drop-shadow-xl text-white'>
           <h3 className="text-xl mb-8 font-semibold border-b pb-4">
           {comments.length}
             {' '}

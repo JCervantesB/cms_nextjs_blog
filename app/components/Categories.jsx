@@ -14,7 +14,7 @@ const Categories = () => {
   }, []);
 
   return (
-    <div className='shadow-lg p-8 mb-8 pb-12 bg-white bg-opacity-10 backdrop-blur-lg rounded-xl drop-shadow-xl text-white'>
+    <div className='shadow-lg p-4 md:p-8 mb-8 pb-12 bg-white bg-opacity-10 backdrop-blur-lg rounded-xl drop-shadow-xl text-white'>
         <h3 className='text-xl mb-8 font-semibold border-b pb-4 text-rose-500'>
             Categorias
         </h3>

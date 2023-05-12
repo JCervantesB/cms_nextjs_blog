@@ -6,7 +6,7 @@ import { BsCalendar2Event } from 'react-icons/bs'
 
 const PostCard = ({ post }) => {
   return (
-    <div className='shadow-xl p-0 lg:p-8 pb-12 mb-8 bg-black bg-opacity-10 backdrop-blur-lg rounded-xl drop-shadow-xl text-white'>
+    <div className='shadow-xl p-0 lg:p-4 md:p-8 pb-12 mb-8 bg-black bg-opacity-10 backdrop-blur-lg rounded-xl drop-shadow-xl text-white'>
       <div className='relative overflow-hidden shadow-md pb-80 mb-6'>
         <img
           src={post.imagenDestacada.url}
@@ -18,7 +18,7 @@ const PostCard = ({ post }) => {
         <Link href={`/post/${post.slug}`}>{post.titulo}</Link>
       </h1>
       <div className='block lg:flex text-center items-center justify-center mb-8 w-full'>
-        <div className='flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8'>
+        <div className='flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8 text-sm md:text-sm md:text-lg'>
           <img 
             alt={post.autor.nombre}
             height="30px"         
@@ -26,7 +26,7 @@ const PostCard = ({ post }) => {
             className='align-middle rounded-full object-cover' 
             src={post.autor.avatar.url}
           />
-          <p className='inline align-middle text-neutral-300 ml-2 text-lg'>
+          <p className='inline align-middle text-neutral-300 ml-2 text-sm md:text-lg'>
             {post.autor.nombre}
           </p>
         </div>
@@ -37,7 +37,7 @@ const PostCard = ({ post }) => {
           </span>
         </div>
       </div>
-      <p className='text-center text-lg text-white font-normal px-4 lg:px-20 mb-8'>
+      <p className='text-center text-sm md:text-lg text-white font-normal px-4 lg:px-20 mb-8'>
         {post.extracto}
       </p>
       <div className='text-center'>

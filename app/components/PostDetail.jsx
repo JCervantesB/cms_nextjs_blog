@@ -165,7 +165,7 @@ const PostDetail = ({ post }) => {
   };
 
   return (
-    <div className="shadow-xl p-8 mb-8 bg-black bg-opacity-10 backdrop-blur-lg rounded-xl drop-shadow-xl text-white">
+    <div className="shadow-xl p-4 md:p-8 mb-8 bg-black bg-opacity-10 backdrop-blur-lg rounded-xl drop-shadow-xl text-white">
       <div className="relative overflow-hidden shadow-md mb-6">
         <img
           src={post?.imagenDestacada.url}
@@ -183,11 +183,11 @@ const PostDetail = ({ post }) => {
               className="align-middle rounded-full object-cover"
               src={post?.autor.avatar.url}
             />
-            <p className="inline align-middle text-neutral-300 ml-2 text-lg">
+            <p className="inline align-middle text-neutral-300 ml-2 text-sm md:text-lg">
               {post?.autor.nombre}
             </p>
           </div>
-          <div className="flex justify-end align-middle text-neutral-300 ml-2 text-lg">
+          <div className="flex justify-end align-middle text-neutral-300 ml-2 text-sm md:text-lg">
             <p>
               <span>
                 <BsCalendar2Event

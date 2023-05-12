@@ -29,7 +29,7 @@ const CategoryPage = () => {
     <Layout>
       {loading && <Loader />}
       {posts.length > 0 ? (
-        <div className="container mx-auto px-10 mb-8">
+        <div className="container mx-auto px-5 md:px-10 mb-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-8 col-span-1">
               {posts.map((post) => (
@@ -37,7 +37,7 @@ const CategoryPage = () => {
               ))}
             </div>
             <div className="lg:col-span-4 col-span-1">
-              <div className="lg:sticky relative top-8">
+              <div className="lg:sticky relative top-4 md:p-8">
                 <PostWidget />
                 <Categories />
               </div>
@@ -45,16 +45,16 @@ const CategoryPage = () => {
           </div>
         </div>
       ) : (
-        <div className="container mx-auto px-10 mb-8">
+        <div className="container mx-auto px-5 md:px-10 mb-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-8 col-span-1">
-              <div className='shadow-xl p-0 lg:p-8 pb-12 mb-8 bg-white bg-opacity-10 backdrop-blur-lg rounded-xl drop-shadow-xl text-white'>
+              <div className='shadow-xl p-0 lg:p-4 md:p-8 pb-12 mb-8 bg-white bg-opacity-10 backdrop-blur-lg rounded-xl drop-shadow-xl text-white'>
 
                 <p className="text-center">No hay posts aún para esta categoría</p>
               </div>
             </div>
             <div className="lg:col-span-4 col-span-1">
-              <div className="lg:sticky relative top-8">
+              <div className="lg:sticky relative top-4 md:p-8">
                 <PostWidget />
                 <Categories />
               </div>

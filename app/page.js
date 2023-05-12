@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <>
       {loading && <Loader />}
-      <div className='container mx-auto px-10 mb-8'>
+      <div className='container mx-auto px-5 md:px-10 mb-8'>
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
           <div className="lg:col-span-8 col-span-1">
             {posts.map((post) => (
@@ -28,7 +28,7 @@ export default function Home() {
             ))}
           </div>
           <div className="lg:col-span-4 col-span-1">
-            <div className="lg:sticky relative top-8">
+            <div className="lg:sticky relative top-4 md:p-8">
               <PostWidget />
               <Categories />
             </div>

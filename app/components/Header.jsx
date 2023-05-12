@@ -14,8 +14,8 @@ const Header = () => {
       }, []);
 
   return (
-    <div className='container mx-auto px-10 mb-8'>
-        <div className='border-b w-full inline-block border-neutral-300 p-8 bg-black bg-opacity-10 backdrop-blur-lg rounded-b-xl drop-shadow-xl'>
+    <div className='container mx-auto px-5 md:px-10 mb-8'>
+        <div className='border-b w-full inline-block border-neutral-300 p-4 md:p-8 bg-black bg-opacity-10 backdrop-blur-lg rounded-b-xl drop-shadow-xl'>
             <div className='text-center md:float-left block'>
                 <Link href='/'>
                     <span className='cursor-pointer font-bold text-4xl text-rose-500'>
