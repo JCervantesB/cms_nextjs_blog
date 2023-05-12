@@ -13,17 +13,19 @@ const PostDetails = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    try {
+    if (slug) {
       const fetchPost = async () => {
-        const post = await getPostDetails(slug);
-        setLoading(false);
-        setPost(post);
-      }
+        try {
+          const result = await getPostDetails(slug);
+          setLoading(false);
+          setPost(result);
+        } catch (error) {
+          console.log('error', error);
+        }
+      };
       fetchPost();
-    } catch (error) {
-      console.log('error', error);
     }
-  }, [slug, setPost]);
+  }, [slug]);
 
   return (
     <>
