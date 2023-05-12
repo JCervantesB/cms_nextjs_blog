@@ -45,7 +45,7 @@ const Header = () => {
             </p>
           </Link>
         </div>
-        <div ref={menuRef} className={`flex flex-col md:float-right md:contents ${isOpen ? 'block' : 'hidden'}`}>
+        <div ref={menuRef} className={`flex flex-col md:float-right mt-2 md:contents ${isOpen ? 'block' : 'hidden'}`}>
           {categories.map((category) => (
             <Link key={category.slug} href={`/categoria/${category.slug}`}>
               <span className='md:float-right mt-2 align-middle text-white ml-4 font-semibold transition duration-700 cursor-pointer hover:text-rose-500 hover:-translate-y-1'>
