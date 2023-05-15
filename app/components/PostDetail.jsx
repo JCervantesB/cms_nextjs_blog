@@ -34,12 +34,12 @@ const PostDetail = ({ post }) => {
 
       if (obj.code) {
         modifiedText = (
-          <pre
+          <span
             key={index}
-            className="bg-gray-900 text-neutral-300 p-4 relative rounded-lg"
+            className="bg-stone-700 text-blue-300 font-mono text-lg px-2 w-auto"
           >
             <code>{text}</code>
-          </pre>
+          </span>
         );
       }
       if (obj.href) {
