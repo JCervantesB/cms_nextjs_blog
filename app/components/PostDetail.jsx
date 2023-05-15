@@ -21,7 +21,7 @@ const PostDetail = ({ post }) => {
 
     if (obj) {
       if (obj.bold) {
-        modifiedText = <b key={index}>{text}</b>;
+        modifiedText = <b className="text-amber-500" key={index}>{text}</b>;
       }
 
       if (obj.italic) {
@@ -36,7 +36,7 @@ const PostDetail = ({ post }) => {
         modifiedText = (
           <span
             key={index}
-            className="bg-stone-700 text-blue-300 font-mono text-lg px-2 w-auto"
+            className="bg-stone-700 text-amber-500 font-mono text-lg px-2 w-auto"
           >
             <code>{text}</code>
           </span>
@@ -47,7 +47,7 @@ const PostDetail = ({ post }) => {
           <a
             key={index}
             href={obj.href}
-            className="text-blue-500 font-semibold"
+            className="text-blue-400 font-semibold"
           >
             {obj.children.map((item, i) => (
               <React.Fragment key={i}>
@@ -62,7 +62,7 @@ const PostDetail = ({ post }) => {
     switch (type) {
       case "heading-three":
         return (
-          <h3 key={index} className="text-xl font-semibold mb-4">
+          <h3 key={index} className="text-xl font-bold mb-4 text-rose-500">
             {modifiedText.map((item, i) => (
               <React.Fragment key={i}>
                 {item && item.text ? item.text : item}
@@ -84,7 +84,7 @@ const PostDetail = ({ post }) => {
         );
       case "link":
         return (
-          <a key={index} href={obj.href} className="text-blue-500">
+          <a key={index} href={obj.href} className="text-blue-400">
             {obj.children.map((item, i) => (
               <React.Fragment key={i}>
                 {item && item.text ? item.text : item}
@@ -94,7 +94,7 @@ const PostDetail = ({ post }) => {
         );
       case "heading-four":
         return (
-          <h4 key={index} className="text-md font-semibold mb-4">
+          <h4 key={index} className="text-md font-bold mb-4 text-rose-500">
             {modifiedText.map((item, i) => (
               <React.Fragment key={i}>
                 {item && item.text ? item.text : item}
@@ -104,7 +104,7 @@ const PostDetail = ({ post }) => {
         );
       case "heading-five":
         return (
-          <h5 key={index} className="text-md font-semibold mb-4">
+          <h5 key={index} className="text-md font-bold mb-4">
             {modifiedText.map((item, i) => (
               <React.Fragment key={i}>
                 {item && item.text ? item.text : item}
@@ -133,7 +133,7 @@ const PostDetail = ({ post }) => {
             height={obj.height}
             width={obj.width}
             src={obj.src}
-            className="m-auto"
+            className="m-auto mb-4 rounded-lg"
           />
         );
       case "code-block":
