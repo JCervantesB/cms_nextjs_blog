@@ -36,7 +36,7 @@ const PostDetail = ({ post }) => {
         modifiedText = (
           <span
             key={index}
-            className="bg-stone-700 text-amber-500 font-mono text-lg px-2 w-auto"
+            className="bg-stone-700 text-amber-500 font-mono text-sm lg:text-lg px-2 w-auto"
           >
             <code>{text}</code>
           </span>
