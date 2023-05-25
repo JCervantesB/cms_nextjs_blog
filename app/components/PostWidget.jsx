@@ -22,7 +22,7 @@ const PostWidget = ({ categories, slug }) => {
 
   return (
     <div className='shadow-xl p-4 md:p-8 mb-8 bg-white bg-opacity-10 backdrop-blur-lg rounded-xl drop-shadow-xl text-white'>
-        <h3 className='text-xl mb-8 font-semibold border-b pb-4 text-rose-500'>
+        <h3 className='text-base lg:text-xl mb-8 font-semibold border-b pb-4 text-rose-500'>
             {slug ? 'Artículos relacionados' : 'Artículos recientes'}
         </h3>
         {relatedPosts.map((post) => (
@@ -37,10 +37,10 @@ const PostWidget = ({ categories, slug }) => {
                     />
                 </div>
                 <div className='flex-grow ml-4'>
-                    <p className='text-gray-500 font-xs'>
+                    <p className='text-gray-500 font-xs text-xs lg:text-sm'>
                         {moment(post.createdAt).format('DD MMMM YYYY')}
                     </p>
-                    <Link href={`/post/${post.slug}`} key={post.titulo} className='text-md transition duration-700 cursor-pointer hover:text-rose-500'>
+                    <Link href={`/post/${post.slug}`} key={post.titulo} className='text-sm lg:text-base transition duration-700 cursor-pointer hover:text-rose-500'>
                         {post.titulo}
                     </Link>
                 </div>

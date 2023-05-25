@@ -12,8 +12,8 @@ const Author = ({autor}) => {
           className='align-middle rounded-full object-cover m-auto'
         />
       </div>
-        <h3 className='text-white my-4 text-xl font-bold'>{autor?.nombre}</h3>
-        <p>{autor?.biografia}</p>
+        <h3 className='text-white my-4 text-base lg:text-xl font-bold'>{autor?.nombre}</h3>
+        <p className='text-sm md:text-base lg:text-xl'>{autor?.biografia}</p>
     </div>
   )
 }
